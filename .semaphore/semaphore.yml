@@ -26,3 +26,5 @@ blocks:
             - pip install codecov
             - sh run_coverage.sh
             - 'bash <(curl -s https://codecov.io/bash) -t $CODECOV_TOKEN'
+      secrets:
+        - name: configparser-list Secret
