@@ -10,7 +10,7 @@ blocks:
       jobs:
         - name: Test and Coverage
           commands:
-            - checkout
+            - 'checkout '
             - sem-version python $PYTHON_VERSION
             - python -m pip install --upgrade pip
             - pip install flake8
