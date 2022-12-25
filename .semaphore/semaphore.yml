@@ -22,10 +22,8 @@ blocks:
           matrix:
             - env_vars: PYTHON_VERSION
               values:
-                - '2.7'
-                - '3.5'
                 - '3.6'
-                - '3.7'
+                - '3.8'
       secrets:
         - name: configparser-list Secret
       env_vars: []
