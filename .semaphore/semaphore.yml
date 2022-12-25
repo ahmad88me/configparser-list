@@ -20,7 +20,7 @@ blocks:
             - 'sh run_coverage.sh '
             - 'bash <(curl -s https://codecov.io/bash) -t $CODECOV_TOKEN'
           matrix:
-            - env_vars: PYTHON_VERSION
+            - env_var: PYTHON_VERSION
               values:
                 - '3.6'
                 - '3.8'
