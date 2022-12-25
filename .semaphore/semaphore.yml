@@ -28,3 +28,4 @@ blocks:
                 - '3.7'
       secrets:
         - name: configparser-list Secret
+      env_vars: []
