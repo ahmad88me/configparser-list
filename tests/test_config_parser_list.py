@@ -18,6 +18,3 @@ class TestConfigParserList(TestCase):
         self.assertListEqual(config.getlist('SEC', 'liststr'), str_list)
         self.assertListEqual(config.getlistint('SEC', 'listint'), int_list)
 
-
-if __name__ == '__main__':
-    unittest.main()
