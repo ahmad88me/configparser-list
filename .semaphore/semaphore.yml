@@ -10,8 +10,8 @@ blocks:
       jobs:
         - name: Test and Coverage
           commands:
-            - sem-version python $PYTHON_VERSION
             - checkout
+            - sem-version python $PYTHON_VERSION
             - python -m pip install --upgrade pip
             - pip install flake8
             - 'flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics'
