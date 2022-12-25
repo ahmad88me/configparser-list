@@ -9,13 +9,6 @@ blocks:
     task:
       jobs:
         - name: Test and Coverage
-          matrix:
-            - env_vars: PYTHON_VERSION
-              values:
-                - '2.7'
-                - '3.5'
-                - '3.6'
-                - '3.7'
           commands:
             - sem-version python $PYTHON_VERSION
             - checkout
@@ -26,5 +19,12 @@ blocks:
             - pip install codecov
             - sh run_coverage.sh
             - 'bash <(curl -s https://codecov.io/bash) -t $CODECOV_TOKEN'
+          matrix:
+            - env_vars: PYTHON_VERSION
+              values:
+                - '2.7'
+                - '3.5'
+                - '3.6'
+                - '3.7'
       secrets:
         - name: configparser-list Secret
