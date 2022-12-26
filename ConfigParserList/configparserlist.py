@@ -1,6 +1,6 @@
-from configparser import ConfigParser
+import configparser
 
-class ConfigParserList(ConfigParser):
+class ConfigParser(configparser.ConfigParser):
 
     # Inspired by: https://stackoverflow.com/questions/335695/lists-in-configparser
     def getlist(self, section, option, sep=",", skip=['"', "'"]):

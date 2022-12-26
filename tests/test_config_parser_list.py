@@ -1,5 +1,5 @@
 from unittest import TestCase
-from ConfigParserList import ConfigParserList
+from ConfigParserList import ConfigParser
 
 
 class TestConfigParserList(TestCase):
@@ -13,7 +13,7 @@ class TestConfigParserList(TestCase):
             'liststr': str_list,
             'listint': int_list}
         }
-        config = ConfigParserList()
+        config = ConfigParser()
         config.read_dict(d)
         self.assertListEqual(config.getlist('SEC', 'liststr'), str_list)
         self.assertListEqual(config.getlistint('SEC', 'listint'), int_list)
